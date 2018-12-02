@@ -4,7 +4,7 @@ from unipath import Path
 from dj_database_url import parse as db_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = Path(__file__).ancestor(2)
+BASE_DIR = Path(__file__).parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
@@ -86,4 +86,4 @@ LANGUAGE_CODE = config('LANGUAGE_CODE', default='en-us', cast=str)
 TIME_ZONE = config('TIME_ZONE', default='UTC', cast=str)
 USE_I18N = True
 USE_L10N = True
-USE_TZ = True
+USE_TZ   = True
