@@ -11,6 +11,9 @@ dj-database-url = "*"
 python-decouple = "*"
 psycopg2-binary = "*"
 djangorestframework-jwt = "*"
+django-cors-headers = "*"
+websocket = "*"
+requests = "*"
 
 [dev-packages]
 

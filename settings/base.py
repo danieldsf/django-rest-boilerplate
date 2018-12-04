@@ -11,6 +11,9 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 
 # Application definition
 INSTALLED_APPS = [
+    # My Applications:
+    'core',
+    #
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -20,8 +23,7 @@ INSTALLED_APPS = [
     # Third Party: 
     'rest_framework',
     'corsheaders',
-    # My Applications:
-
+    
 ]
 
 MIDDLEWARE = [
