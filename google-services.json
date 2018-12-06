@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "166742938590",
+    "firebase_url": "https://labrador-1e060.firebaseio.com",
+    "project_id": "labrador-1e060",
+    "storage_bucket": "labrador-1e060.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166742938590:android:b24bedfd02841ba5",
+        "android_client_info": {
+          "package_name": "com.example.danielfarias.labradormobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166742938590-49cl0v9p19kj3lpi8t3ganaq0ftje142.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.danielfarias.labradormobile",
+            "certificate_hash": "c4651b05590837c6f837ce816ffe648307adcf2f"
+          }
+        },
+        {
+          "client_id": "166742938590-053sdblr96on8ljckihiloj8sgqv8jfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqnawx2iI4uJqWlalBXb14WSqYM2ljhsk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166742938590-053sdblr96on8ljckihiloj8sgqv8jfa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,10 +1,12 @@
-import os
+import os, pyrebase
 from decouple import config
 from unipath import Path
 from dj_database_url import parse as db_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).parent.parent
+
+FIREBASE_PATH = BASE_DIR.child('google-services.json')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
@@ -69,6 +71,14 @@ DATABASES = {
     ),
 }
 
+FIREBASE_CONFIG = {
+  'apiKey': config('FIREBASE_API_KEY', cast=str),
+  'authDomain': config('FIREBASE_AUTH_DOMAIN', cast=str),
+  'databaseURL': config('FIREBASE_DATABASE_URL', cast=str),
+  'storageBucket': config('FIREBASE_STORAGE_BUCKET', cast=str),
+  'serviceAccount': FIREBASE_PATH
+}
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
@@ -89,3 +99,6 @@ TIME_ZONE = config('TIME_ZONE', default='UTC', cast=str)
 USE_I18N = True
 USE_L10N = True
 USE_TZ   = True
+
+FIREBASE_APP = pyrebase.initialize_app(FIREBASE_CONFIG)
+print("Firebase ON")
