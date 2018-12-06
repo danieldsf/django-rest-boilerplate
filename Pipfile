@@ -14,6 +14,8 @@ djangorestframework-jwt = "*"
 django-cors-headers = "*"
 websocket = "*"
 requests = "*"
+django-solo = "*"
+pyrebase = "*"
 
 [dev-packages]
 
