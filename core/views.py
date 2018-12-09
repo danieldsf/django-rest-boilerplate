@@ -1,15 +1,29 @@
 from django.shortcuts import render
 from django.utils.safestring import mark_safe
 from django.http import HttpResponse
-import requests as req 
+from settings import FIREBASE_APP
+from .serializers import *
+import requests, threading, json
 
-# Def Send POST:
+def long_process():
+    print(FIREBASE_APP)
+    db = FIREBASE_APP.database()
+    db.child('danger').set(True)
+    print(FIREBASE_APP)
 
-def call_websocket():
+def init_subproccess():
+    t = threading.Thread(target=long_process, args={}, kwargs={})
+    t.setDaemon(True)
+    t.start()
+
+def call_ws():
+    URL = 'http://localhost:3000/publish'
     payload = {'some': 'data'}
-    r = req.post('http://localhost:3000/publish', json=payload)
+    r = requests.post(URL, json=payload)
     print(r)
+    
 
 def index(request):
-    call_websocket()
+    call_ws()
+    #init_subproccess()
     return HttpResponse('A')

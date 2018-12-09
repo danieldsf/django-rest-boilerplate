@@ -100,5 +100,5 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ   = True
 
+# Firebase DATA:
 FIREBASE_APP = pyrebase.initialize_app(FIREBASE_CONFIG)
-print("Firebase ON")
